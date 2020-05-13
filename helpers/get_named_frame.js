@@ -4,14 +4,16 @@
 function getNamedFrame ( name ) {
 
   const dTop = ( TOP_HEIGHT_PERCENTAGE - 50 ) / 100,
-        dLeft = ( LEFT_WIDTH_PERCENTAGE - 50 ) / 100;
+        dLeft = ( LEFT_WIDTH_PERCENTAGE - 50 ) / 100,
+        dRight = ( RIGHT_WIDTH_PERCENTAGE - 50 ) / 100;
 
   switch ( name ) {
     /* SIDES */
     case 'top': return [0, 0, 1, .5 + dTop];
-    case 'right': return [.5 + dLeft, 0, .5 - dLeft, 1];
+    // case 'right': return [.5 + dLeft, 0, .5 - dLeft, 1];
     case 'bottom': return [0, .5 + dTop, 1, .5 - dTop];
     case 'left': return [0, 0, .5 + dLeft, 1];
+    case 'right': return [0, 0, .5 + dRight, 1];
     /* CORNERS */
     case 'top-left': return [0, 0, .5 + dLeft, .5 + dTop];
     case 'top-right': return [.5 + dLeft, 0, .5 - dLeft, .5 + dTop];
